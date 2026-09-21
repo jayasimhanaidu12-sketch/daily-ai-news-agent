@@ -16,13 +16,9 @@
 name: Daily AI News Digest
 
 on:
-  # Schedule: 3:00 AM UTC = 8:30 AM IST
   schedule:
-    - cron: '0 3 * * *'
-
-  # Allow manual triggering from GitHub UI for testing
+    - cron: '30 2 * * *'  # 2:30 AM UTC = 8:00 AM IST
   workflow_dispatch:
-
 jobs:
   send-daily-digest:
     runs-on: ubuntu-latest
